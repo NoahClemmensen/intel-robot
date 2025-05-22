@@ -1,0 +1,10 @@
+services:
+  node:
+    image: node:22-alpine
+    container_name: intel-robot
+    ports:
+      - "8080:8080" # Remember to change this to the .env port
+    volumes:
+      - ".:/home/node/app"
+    working_dir: /home/node/app
+    command: /bin/sh -c "npm install && node bin/www"
