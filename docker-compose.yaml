@@ -6,7 +6,7 @@ services:
       - ".:/home/node/app"
       - "./envs/.env1:/home/node/app/.env"
     working_dir: /home/node/app
-    command: /bin/sh -c "npm install && node bin/www"
+    command: /bin/sh -c "npm install && node app.js"
 
   intel-robot-2:
     image: node:22-alpine
@@ -15,7 +15,7 @@ services:
       - ".:/home/node/app"
       - "./envs/.env2:/home/node/app/.env"
     working_dir: /home/node/app
-    command: /bin/sh -c "npm install && node bin/www"
+    command: /bin/sh -c "npm install && node app.js"
 
   intel-robot-3:
     image: node:22-alpine
@@ -24,7 +24,7 @@ services:
       - ".:/home/node/app"
       - "./envs/.env3:/home/node/app/.env"
     working_dir: /home/node/app
-    command: /bin/sh -c "npm install && node bin/www"
+    command: /bin/sh -c "npm install && node app.js"
 
   intel-robot-4:
     image: node:22-alpine
@@ -33,7 +33,7 @@ services:
       - ".:/home/node/app"
       - "./envs/.env4:/home/node/app/.env"
     working_dir: /home/node/app
-    command: /bin/sh -c "npm install && node bin/www"
+    command: /bin/sh -c "npm install && node app.js"
 
   intel-robot-5:
     image: node:22-alpine
@@ -42,4 +42,4 @@ services:
       - ".:/home/node/app"
       - "./envs/.env5:/home/node/app/.env"
     working_dir: /home/node/app
-    command: /bin/sh -c "npm install && node bin/www"
+    command: /bin/sh -c "npm install && node app.js"
