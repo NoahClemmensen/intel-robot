@@ -1,10 +1,45 @@
 services:
-  node:
+  intel-robot-1:
     image: node:22-alpine
-    container_name: intel-robot
-    ports:
-      - "8080:8080" # Remember to change this to the .env port
+    container_name: intel-robot-1
     volumes:
       - ".:/home/node/app"
+      - "./envs/.env1:/home/node/app/.env"
+    working_dir: /home/node/app
+    command: /bin/sh -c "npm install && node bin/www"
+
+  intel-robot-2:
+    image: node:22-alpine
+    container_name: intel-robot-2
+    volumes:
+      - ".:/home/node/app"
+      - "./envs/.env2:/home/node/app/.env"
+    working_dir: /home/node/app
+    command: /bin/sh -c "npm install && node bin/www"
+
+  intel-robot-3:
+    image: node:22-alpine
+    container_name: intel-robot-3
+    volumes:
+      - ".:/home/node/app"
+      - "./envs/.env3:/home/node/app/.env"
+    working_dir: /home/node/app
+    command: /bin/sh -c "npm install && node bin/www"
+
+  intel-robot-4:
+    image: node:22-alpine
+    container_name: intel-robot-4
+    volumes:
+      - ".:/home/node/app"
+      - "./envs/.env4:/home/node/app/.env"
+    working_dir: /home/node/app
+    command: /bin/sh -c "npm install && node bin/www"
+
+  intel-robot-5:
+    image: node:22-alpine
+    container_name: intel-robot-5
+    volumes:
+      - ".:/home/node/app"
+      - "./envs/.env5:/home/node/app/.env"
     working_dir: /home/node/app
     command: /bin/sh -c "npm install && node bin/www"
